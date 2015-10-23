@@ -10,7 +10,13 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            Console.SetBufferSize(80, 25);
+            (new HorizontalLine(0, 78, 0, '+')).Draw();
+            (new HorizontalLine(0, 78, 24, '+')).Draw();
+            (new VerticalLine(0, 0, 24, '+')).Draw();
+            (new VerticalLine(78, 0, 24, '+')).Draw();
+            Console.SetCursorPosition(3, 3);
+
             Console.ReadLine();
         }
     }
